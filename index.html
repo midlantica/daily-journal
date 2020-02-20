@@ -7,30 +7,37 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <div>
-    <h1>Daily Journal</h1>
-    <form action="">
-      <fieldset>
-        <label for="journalDate">Date of Journal</label>
-        <input type="date" id="journalDate" name="journalDate">
-      </fieldset>
-      <fieldset>
-        <input type="text" id="conceptsCovered" name="conceptsCovered">
-      </fieldset>
-      <fieldset>
-        <textarea id="journalEntry" name="journalEntry" cols="30" rows="10"></textarea>
-      </fieldset>
-      <fieldset>
-        <select id="moodForTheDay" name="moodForTheDay">
-          <option value="sad">Sad</option>
-          <option value="indifferent">Indifferent</option>
-          <option value="happy">Happy</option>
-          <option value="joy">Joy</option>
-        </select>
-      </fieldset>
-      <button>Record Journal Entry</button>
-    </form>
-  </div>
-  <script src="./scripts/main.js"></script>
-</body>
-</html>
+  <div class="container">
+    <main>
+      <h1>Daily Journal</h1>
+      <form>
+        <fieldset>
+          <label for="journalDate">Date of Journal</label>
+          <input type="date" id="journalDate" name="journalDate">
+        </fieldset>
+        <fieldset>
+          <label for="conceptsCovered">Concepts Covered</label>
+          <input type="text" id="conceptsCovered" name="conceptsCovered">
+        </fieldset>
+        <fieldset>
+          <label for="journalEntry">Journal Entry</label>
+          <textarea id="journalEntry" name="journalEntry" cols="30" rows="7"></textarea>
+        </fieldset>
+        <fieldset>
+          <label for="moodForTheDay">Mood for the Day</label>
+          <select id="moodForTheDay" name="moodForTheDay">
+            <option value="sad">Sad</option>
+            <option value="indifferent">Indifferent</option>
+            <option value="happy">Happy</option>
+            <option value="joy">Joy</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <button>Record Journal Entry</button>
+        </fieldset>
+      </form>
+    </main>
+    </div>
+    <script src="./scripts/main.js"></script>
+  </body>
+  </html>
