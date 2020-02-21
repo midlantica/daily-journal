@@ -1,0 +1,10 @@
+:root {
+  --black: rgb(14, 14, 14);
+  --blue-dk: #175664;
+  --blue-md: #22b4d4;
+  --blue-lt: #87EAFF;
+  --blue-pale: azure;
+  --cream: #ddd;
+  --white: #fff;
+  --fontage: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

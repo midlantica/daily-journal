@@ -1,1 +1,1 @@
-console.log("Helloooooooooooooo!")
+console.log("Daily Jornal form")
