@@ -1,25 +1,47 @@
+:root {
+  --black: rgb(14, 14, 14);
+  --blue-dk: #175664;
+  --blue-md: #22b4d4;
+  --blue-lt: #87EAFF;
+  --blue-pale: azure;
+  --cream: #ddd;
+  --white: #fff;
+  --fontage: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 * {
   box-sizing: content-box;
 }
 
+html {
+  background: var(--blue-dk);
+  background-image: linear-gradient(180deg, var(--blue-lt) 12%, var(--blue-dk) 100%);
+  padding: 0;
+  margin: 0;
+  font-family: var(--fontage);
+}
+
 body {
-  background-image: linear-gradient(180deg, #87EAFF 12%, #175664 100%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--fontage);
+  height: 100vh;
+  /* padding: 20px 0 -20px 0; */
+  margin: 0;
 }
 
 .container {
   width: 600px;
-  height: 100vh;
   margin: 0 auto;
+  padding-top: 2em;
 }
 
 main {
-  background: azure;
+  background: var(--blue-pale);
   padding: 2em 2em 1em;
   border-radius: .3em;
   width: 420px;
-  margin: 2em auto 3em;
-  box-shadow: 3px 3px 9px 0px #355961;
+  box-shadow: 3px 3px 9px 0px var(--blue-dk);
+  margin: 0em auto 0em;
+
 }
 
 main > h1 {
@@ -28,7 +50,7 @@ main > h1 {
 
 h1, h2, h3, h4, h5 h6 {
   font-weight: normal;
-  color: #31b4d0;
+  color: var(--blue-md);
 }
 
 .coffee {
@@ -42,9 +64,6 @@ p, ul, ol, li {
   font-size: 1em;
 }
 
-
-/* >>>>>>>>>>>>>>>>>>>>>>>>> */
-
 form {
   margin: 0em auto;
   text-align: left;
@@ -57,18 +76,19 @@ form fieldset {
   width: 400px;
 }
 
-
 form label {
   display: block;
+  color: var(--blue-dk);
+  letter-spacing: 0.03em;
 }
 
 form input,
 form select {
   margin-top: .5em;
   width: 400px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--cream);
   height: 2em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--fontage);
   font-size: 1.5em;
   font-size: .9em;
   font-weight: normal;
@@ -76,18 +96,17 @@ form select {
   line-height: 1.6em;
   font-size: 1em;
   font-weight: 300;
-  box-shadow: inset 1px 1px 6px -5px black;
-  /* border-radius: 20px; */
+  box-shadow: inset 1px 1px 6px -5px var(--black);
   padding-left: 0.75em;
+  color: var(--blue-dk);
 }
 
 form input:focus,
 form select:focus,
 form textarea:focus {
-  /* outline: 2px solid rgba(66, 211, 243, 0.4); */
-  outline: 3px solid rgba(49, 180, 208, 0.5);
-  /* border-radius: 20px; */
+  outline: 3px solid var(--blue-lt);
   padding-left: 0.75em;
+  letter-spacing: 0.01em;
 }
 
 form select {
@@ -95,45 +114,54 @@ form select {
   line-height: 1.6em;
   font-size: 1em;
   font-weight: 300;
-  background: white;
+  background: var(--white);
   box-shadow: 1px 1px 6px -5px black;
   height: 2.7em;
   padding-left: 0.75em;
+  color: var(--blue-dk);
+  letter-spacing: 0.01em;
 }
 
 form textarea {
   margin-top: .5em;
   width: 400px;
-  border: 1px solid #ddd;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid var(--cream);
+  font-family: var(--fontage);
   font-size: .9em;
   font-weight: normal;
   padding: .25em .5em .25em .75em;
   line-height: 1.6em;
   font-size: 1em;
   font-weight: 300;
+  color: var(--blue-dk);
+  letter-spacing: 0.01em;
 }
 
 form fieldset button {
   float: right;
-  /* clear: both; */
   padding: .75em 1.25em;
-  /* margin-bottom: 1em; */
   font-size: 1.15em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--fontage);
   border-radius: .25em;
-  background: linear-gradient(180deg, #E7FBFF 12%, #87EAFF 100%);
   margin-top: 0.75em;
   margin-right: -1.2em;
   font-weight: 400;
   cursor: pointer;
-  border: 1px solid rgba(23, 86, 100, 0.25);
+  border: 1px solid azul;
+  letter-spacing: 0.01em;
+  background: linear-gradient(180deg, var(--white) 10%, #87EAFF 100%);
+  color: var(--blue-dk);
 }
 
 form fieldset button:hover {
-  background: linear-gradient(180deg, #87EAFF 12%, rgb(107, 186, 204) 100%);
+  background: linear-gradient(180deg, var(--white) 20%, rgb(119, 206, 226) 100%);
+  cursor: pointer;
 }
 
 form fieldset button:focus {
   outline: none;
+}
+
+form fieldset .buttonField:hover {
+  cursor: pointer;
 }
