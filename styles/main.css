@@ -14,24 +14,23 @@
 }
 
 html {
+  font-family: var(--fontage);
   background: var(--blue-dk);
   background-image: linear-gradient(180deg, var(--blue-lt) 12%, var(--blue-dk) 100%);
   padding: 0;
   margin: 0;
-  font-family: var(--fontage);
 }
 
 body {
   font-family: var(--fontage);
   height: 100vh;
-  /* padding: 20px 0 -20px 0; */
-  margin: 0;
+  margin: auto;
 }
 
 .container {
   width: 600px;
-  margin: 0 auto;
-  padding-top: 2em;
+  margin: auto;
+  padding: 2em 0 0;
 }
 
 main {
@@ -40,8 +39,7 @@ main {
   border-radius: .3em;
   width: 420px;
   box-shadow: 3px 3px 9px 0px var(--blue-dk);
-  margin: 0em auto 0em;
-
+  margin: auto;
 }
 
 main > h1 {
@@ -49,8 +47,8 @@ main > h1 {
 }
 
 h1, h2, h3, h4, h5 h6 {
-  font-weight: normal;
   color: var(--blue-md);
+  font-weight: normal;
 }
 
 .coffee {
@@ -67,38 +65,36 @@ p, ul, ol, li {
 form {
   margin: 0em auto;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 form fieldset {
   padding: 0;
   border: none;
-  margin: 1em 0;
+  margin: 1em 0 0;
   width: 400px;
 }
 
 form label {
-  display: block;
   color: var(--blue-dk);
   letter-spacing: 0.03em;
 }
 
 form input,
 form select {
+  color: var(--blue-dk);
+  font-family: var(--fontage);
+  font-size: 1em;
+  font-weight: 300;
   margin-top: .5em;
   width: 400px;
   border: 1px solid var(--cream);
   height: 2em;
-  font-family: var(--fontage);
-  font-size: 1.5em;
-  font-size: .9em;
-  font-weight: normal;
   padding: .25em .5em;
   line-height: 1.6em;
-  font-size: 1em;
-  font-weight: 300;
   box-shadow: inset 1px 1px 6px -5px var(--black);
   padding-left: 0.75em;
-  color: var(--blue-dk);
 }
 
 form input:focus,
@@ -110,47 +106,44 @@ form textarea:focus {
 }
 
 form select {
-  width: 420px;
-  line-height: 1.6em;
+  color: var(--blue-dk);
   font-size: 1em;
   font-weight: 300;
+  width: 420px;
+  line-height: 1.6em;
   background: var(--white);
   box-shadow: 1px 1px 6px -5px black;
   height: 2.7em;
   padding-left: 0.75em;
-  color: var(--blue-dk);
   letter-spacing: 0.01em;
 }
 
 form textarea {
+  color: var(--blue-dk);
+  font-family: var(--fontage);
+  font-size: 1em;
+  font-weight: 300;
   margin-top: .5em;
   width: 400px;
   border: 1px solid var(--cream);
-  font-family: var(--fontage);
-  font-size: .9em;
-  font-weight: normal;
   padding: .25em .5em .25em .75em;
   line-height: 1.6em;
-  font-size: 1em;
-  font-weight: 300;
-  color: var(--blue-dk);
   letter-spacing: 0.01em;
 }
 
 form fieldset button {
+  color: var(--blue-dk);
+  font-family: var(--fontage);
+  font-size: 1.15em;
+  font-weight: 400;
   float: right;
   padding: .75em 1.25em;
-  font-size: 1.15em;
-  font-family: var(--fontage);
   border-radius: .25em;
-  margin-top: 0.75em;
-  margin-right: -1.2em;
-  font-weight: 400;
   cursor: pointer;
   border: 1px solid azul;
   letter-spacing: 0.01em;
   background: linear-gradient(180deg, var(--white) 10%, #87EAFF 100%);
-  color: var(--blue-dk);
+  margin: 0.75em -1.2em 1em 0;
 }
 
 form fieldset button:hover {
