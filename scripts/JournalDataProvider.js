@@ -20,7 +20,6 @@
 //   return sortedByDate
 // }
 
-
 document
   .querySelector("#submitBtn")
   .addEventListener("click", theClickEvent => {
