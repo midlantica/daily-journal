@@ -2,25 +2,25 @@ console.log("JournalDataProvider.js loaded")
 
 const journal = [
   {
-    date: "07/24/2025",
+    date: "07/20/2025",
     concept: "HTML & CSS",
     entry:
       "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok"
+    mood: "Happy"
   },
   {
-    date: "07/28/2025",
+    date: "07/22/2025",
     concept: "Second Story",
     entry:
       "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
     mood: "Ok"
   },
   {
-    date: "07/28/2025",
+    date: "07/23/2025",
     concept: "Third Story",
     entry:
       "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Ok"
+    mood: "Indifferent"
   },
   {
     date: "07/24/2025",
@@ -30,18 +30,18 @@ const journal = [
     mood: "Ok"
   },
   {
-    date: "07/28/2025",
+    date: "07/25/2025",
     concept: "Fifth Story",
     entry:
       "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok"
+    mood: "Happy"
   },
   {
     date: "07/28/2025",
     concept: "Sixth Story",
     entry:
       "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Ok"
+    mood: "Sad"
   }
 ]
 
