@@ -10,34 +10,41 @@
   <div class="container">
     <main>
       <h1><img class="coffee" src="/images/coffee.png" alt="">Daily Journal</h1>
-      <form>
-        <fieldset>
-          <label for="journalDate">Date of Journal</label>
-          <input type="date" id="journalDate" name="journalDate">
-        </fieldset>
-        <fieldset>
-          <label for="conceptsCovered">Concepts Covered</label>
-          <input type="text" id="conceptsCovered" name="conceptsCovered">
-        </fieldset>
-        <fieldset>
-          <label for="journalEntry">Journal Entry</label>
-          <textarea id="journalEntry" name="journalEntry" cols="30" rows="6"></textarea>
-        </fieldset>
-        <fieldset>
-          <label for="moodForTheDay">Mood for the Day</label>
-          <select class="buttonField" id="moodForTheDay" name="moodForTheDay">
-            <option value="sad">Sad</option>
-            <option value="indifferent">Indifferent</option>
-            <option value="happy">Happy</option>
-            <option value="joy">Joy</option>
-          </select>
-        </fieldset>
-        <fieldset>
-          <button>Record Journal Entry</button>
-        </fieldset>
-      </form>
+        <div class="formWrap">
+          <form>
+            <fieldset>
+              <label for="journalDate">Date of Journal</label>
+              <input type="date" id="journalDate" name="journalDate">
+            </fieldset>
+            <fieldset>
+              <label for="conceptsCovered">Concepts Covered</label>
+              <input type="text" id="conceptsCovered" name="conceptsCovered">
+            </fieldset>
+            <fieldset>
+              <label for="journalEntry">Journal Entry</label>
+              <textarea id="journalEntry" name="journalEntry" cols="30" rows="4"></textarea>
+            </fieldset>
+            <fieldset>
+              <label for="moodForTheDay">Mood for the Day</label>
+              <select class="buttonField" id="moodForTheDay" name="moodForTheDay">
+                <option value="..." select>Select...</option>
+                <option value="sad">Sad</option>
+                <option value="indifferent">Indifferent</option>
+                <option value="happy">Happy</option>
+                <option value="joy">Joy</option>
+              </select>
+            </fieldset>
+            <button id="submitBtn">Submit</button>
+          </form>
+          <div class="entryWrap">
+            <div id="entryLog"></div>
+          </div>
+        </div>
+      </div>
+      
     </main>
-    </div>
-    <script src="./scripts/main.js"></script>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+    
   </body>
   </html>

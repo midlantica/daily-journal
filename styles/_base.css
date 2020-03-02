@@ -15,6 +15,17 @@ body {
   height: 100vh;
 }
 
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+  }
+}
+
+h1 {
+  color: var(--blue-dk);
+  font-weight: normal;
+}
+
 h1, h2, h3, h4, h5 h6 {
   color: var(--blue-md);
   font-weight: normal;
@@ -29,6 +40,3 @@ p, ul, ol, li {
   background: pink;
 }
 
-.test {
-  /*  */
-}
