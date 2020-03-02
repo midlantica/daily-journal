@@ -1,29 +1,66 @@
-// const journal = [
-//   {
-//     date: "07/24/2025",
-//     concept: "HTML & CSS",
-//     entry:
-//       "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-//     mood: "Ok"
-//   }
-// ]
+console.log("JournalDataProvider.js loaded")
+
+const journal = [
+  {
+    date: "07/24/2025",
+    concept: "HTML & CSS",
+    entry:
+      "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+    mood: "Ok"
+  },
+  {
+    date: "07/28/2025",
+    concept: "Second Story",
+    entry:
+      "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+    mood: "Ok"
+  },
+  {
+    date: "07/28/2025",
+    concept: "Third Story",
+    entry:
+      "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
+    mood: "Ok"
+  },
+  {
+    date: "07/24/2025",
+    concept: "Fourth story",
+    entry:
+      "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+    mood: "Ok"
+  },
+  {
+    date: "07/28/2025",
+    concept: "Fifth Story",
+    entry:
+      "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+    mood: "Ok"
+  },
+  {
+    date: "07/28/2025",
+    concept: "Sixth Story",
+    entry:
+      "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
+    mood: "Ok"
+  }
+]
 
 /*
     You export a function that provides a version of the
     raw data in the format that you want
 */
-// export const useJournalEntries = () => {
-//   const sortedByDate = journal.sort(
-//     (currentEntry, nextEntry) =>
-//       Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-//   )
-//   return sortedByDate
-// }
+export const useJournalEntries = () => {
+  const sortedByDate = journal.sort(
+    (currentEntry, nextEntry) =>
+      Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+  )
+  return sortedByDate
+}
 
 document
   .querySelector("#submitBtn")
-  .addEventListener("click", theClickEvent => {
-    console.log("111111111111111")
+  .addEventListener("click", 
+  theClickEvent => {
     submitEntry()
   }
 )
@@ -33,9 +70,9 @@ const submitEntry = () => {
   const conceptsCovered = document.getElementById("conceptsCovered").value
   const journalEntry = document.getElementById("journalEntry").value
   const moodForTheDay = document.getElementById("moodForTheDay").value
-  console.log(
-    `${journalDate} ${conceptsCovered} ${journalEntry} ${moodForTheDay}`
-  )
-  console.log("222222222")
+  return `${journalDate.value} ${conceptsCovered.value} ${journalEntry.value} ${moodForTheDay.value}`
 }
-// submitEntry()
+
+submitEntry()
+
+export default submitEntry

@@ -1,8 +1,10 @@
+console.log("JournalEntryList.js loaded")
+
 /*
- *  Purpose:
- *    To render as many journal entry components as
- *    there are items in the collection exposed by the
- *    data provider component
+  Purpose:
+  To render as many journal entry components as
+  there are items in the collection exposed by the
+  data provider component
  */
 import { useJournalEntries } from "./JournalDataProvider.js"
 import JournalEntryComponent from "./JournalEntry.js"
@@ -19,7 +21,8 @@ const EntryListComponent = () => {
       Invoke the component that returns an
       HTML representation of a single entry
     */
-    entryLog.innerHTML += ???
+    entryLog.innerHTML += JournalEntryComponent(entry)
+    // console.log(`This is a joutnal thing: ${journal}`)
   }
 }
 

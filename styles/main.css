@@ -1,23 +1,24 @@
 @import '_colors.css';
 @import '_base.css';
+@import '_overflowScroll.css';
+
+:root {
+  --formFieldsWidth: 90%;
+}
 
 .container {
-  width: 600px;
+  width: 100%;
   margin: auto;
-  padding: 2em 0 0;
+  padding: 0;
 }
 
 main {
   background: var(--blue-pale);
   padding: 2em 2em 1em;
   border-radius: .3em;
-  width: 420px;
+  /* width: 90%; */
   box-shadow: 3px 3px 9px 0px var(--blue-dk);
   margin: 0 auto;
-}
-
-main h1 {
-  margin-top: 0;
 }
 
 .coffee {
@@ -27,19 +28,68 @@ main h1 {
   float: left;
 }
 
+.flexWrap {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.formWrap {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+}
+
+main h1 {
+  margin-top: 0;
+  color: var(--blue-dk);
+}
+
 /* FORMAGE */
 form {
-  margin: 0em auto;
+  margin: 0em;
   text-align: left;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 40%;
 }
+
+.entryWrap {
+  overflow: scroll;
+  max-height: 600px;
+  width: 56%;
+  margin-left: 1em;
+}
+
+@media (max-width: 600px) {
+  form,
+  .entryWrap {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  form input, 
+  form select,
+  form textarea {
+    width: 95.6% !important;
+  }
+
+  form select {
+    width: 99.6% !important;
+  }
+}
+
 
 form fieldset {
   padding: 0;
   border: none;
   margin: 1em 0 0;
-  width: 400px;
+  /* width: 400px; */
+  display: flex;
+  flex-flow: row;
+  /* width: var(--formFieldsWidth); */
 }
 
 form label {
@@ -49,12 +99,12 @@ form label {
 
 form input,
 form select {
+  width: var(--formFieldsWidth);
   color: var(--blue-dk);
   font-family: var(--fontage);
   font-size: 1em;
   font-weight: 300;
   margin-top: .5em;
-  width: 400px;
   border: 1px solid var(--cream);
   height: 2em;
   padding: .25em .5em;
@@ -66,16 +116,18 @@ form select {
 form input:focus,
 form select:focus,
 form textarea:focus {
+  width: var(--formFieldsWidth);
   outline: 3px solid var(--blue-lt);
   padding-left: 0.75em;
   letter-spacing: 0.01em;
 }
 
 form select {
+  /* width: var(--formFieldsWidth); */
+  width: 97.6%;
   color: var(--blue-dk);
   font-size: 1em;
   font-weight: 300;
-  width: 420px;
   line-height: 1.6em;
   background: var(--white);
   box-shadow: 1px 1px 6px -5px black;
@@ -86,12 +138,12 @@ form select {
 }
 
 form textarea {
+  width: var(--formFieldsWidth);
   color: var(--blue-dk);
   font-family: var(--fontage);
   font-size: 1em;
   font-weight: 300;
   margin-top: .5em;
-  width: 400px;
   border: 1px solid var(--cream);
   padding: .25em .5em .25em .75em;
   line-height: 1.6em;
@@ -99,7 +151,7 @@ form textarea {
   box-shadow: inset 1px 1px 6px -5px var(--black);
 }
 
-form fieldset button {
+form fieldset button {  
   color: var(--blue-dk);
   font-family: var(--fontage);
   font-size: 1.15em;
@@ -111,7 +163,7 @@ form fieldset button {
   border: 1px solid azul;
   letter-spacing: 0.01em;
   background: linear-gradient(180deg, var(--white) 10%, #87EAFF 100%);
-  margin: 0.75em -1.2em 1em 0;
+  margin: 0.75em 0em 1em 0;
 }
 
 form fieldset button:hover {
@@ -125,4 +177,41 @@ form fieldset button:focus {
 
 form fieldset .buttonField:hover {
   cursor: pointer;
+}
+
+.journalEntry {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: .9em;
+  font-weight: 200;
+  letter-spacing: 0.025em;
+  margin: 0;
+  line-height: 1.3;
+  padding: 0.4em 1.5em;
+  background: var(--white);
+}
+
+.journalEntry hr { 
+  border: .5px solid hsl(0, 0%, 85%);
+  margin: 0;
+  padding: 0;
+}
+
+.journal__date {
+  font-size: .85em;
+  margin: 0;
+} 
+
+p.journal__concept {
+  font-weight: 400;
+  margin-top: .25em;
+  margin-bottom: 0em;
+  color: var(--blue-dk);
+}
+
+p.journal__entry {
+  margin-top: 0;
+}
+
+p.journal__mood {
+  margin-top: .25em;
 }
