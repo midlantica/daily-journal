@@ -1,0 +1,20 @@
+header,
+footer {
+  color: white;
+  background: grey;
+}
+
+header {
+  /*  */
+}
+
+footer h1 {
+  /*  */
+}
+
+.coffee {
+  width: 38px;
+  margin-bottom: 0em;
+  margin-right: 0.3em;
+  float: left;
+}

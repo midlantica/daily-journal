@@ -4,8 +4,8 @@
 
 html {
   font-family: var(--fontage);
-  background: var(--blue-dk);
-  background-image: linear-gradient(180deg, var(--blue-lt) 12%, var(--blue-dk) 100%);
+  background: var(--cream);
+  /* background-image: linear-gradient(180deg, var(--blue-lt) 12%, var(--blue-dk) 100%); */
   margin: 0;
   padding: 0;
 }
@@ -26,12 +26,19 @@ h1 {
   font-weight: normal;
 }
 
-h1, h2, h3, h4, h5 h6 {
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
   color: var(--blue-md);
   font-weight: normal;
 }
 
-p, ul, ol, li {
+p,
+ul,
+ol,
+li {
   font-size: 1em;
 }
 
@@ -39,4 +46,3 @@ p, ul, ol, li {
   border: 1px solid red;
   background: pink;
 }
-
