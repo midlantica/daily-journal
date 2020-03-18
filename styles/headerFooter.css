@@ -1,20 +1,39 @@
 header,
 footer {
-  color: white;
-  background: grey;
+  color: var(--white);
+  background: var(--bean-dk);
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
   /*  */
 }
 
-footer h1 {
-  /*  */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.coffee {
-  width: 38px;
-  margin-bottom: 0em;
-  margin-right: 0.3em;
-  float: left;
+header img {
+  margin: 0 1em;
+  height: 51px;
+}
+
+header h1,
+footer h1 {
+  color: var(--white);
+}
+
+header h1 {
+  font-size: 1.75em;
+}
+
+footer h4 {
+  color: var(--white);
 }

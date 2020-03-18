@@ -10,41 +10,28 @@
 
 <body>
   <div class="container">
+
+    <header>
+      <img src="/images/coffee.png" alt="">
+      <h1>Daily Journal</h1>
+    </header>
+
     <main>
-      <h1><img class="coffee" src="/images/coffee.png" alt="">Daily Journal</h1>
-      <div class="formWrap">
-        <form>
-          <fieldset>
-            <label for="journalDate">Date of Journal</label>
-            <input type="date" id="journalDate" name="journalDate">
-          </fieldset>
-          <fieldset>
-            <label for="conceptsCovered">Concepts Covered</label>
-            <input type="text" id="conceptsCovered" name="conceptsCovered">
-          </fieldset>
-          <fieldset>
-            <label for="journalEntry">Journal Entry</label>
-            <textarea id="journalEntry" name="journalEntry" cols="30" rows="4"></textarea>
-          </fieldset>
-          <fieldset>
-            <label for="moodForTheDay">Mood for the Day</label>
-            <select class="buttonField" id="moodForTheDay" name="moodForTheDay">
-              <option value="select" select>Select...</option>
-              <option value="sad">Sad</option>
-              <option value="indifferent">Indifferent</option>
-              <option value="happy">Happy</option>
-              <option value="joy">Joy</option>
-            </select>
-          </fieldset>
-          <button id="submitBtn">Submit</button>
-        </form>
+      <div class="gridAuto">
+        <section class="formWrap w100">
+        </section>
         <div class="entryWrap">
-          <div id="entryLog"></div>
+          <div id="entryLog" class="entryLogWrap"></div>
         </div>
       </div>
   </div>
 
   </main>
+
+  <footer>
+    <p>&copy; 2020</p>
+  </footer>
+
   </div>
   <script type="module" src="./scripts/main.js"></script>
 </body>
