@@ -1,0 +1,95 @@
+{
+  "journal": [
+    {
+      "id": 1,
+      "date": "07/20/2025",
+      "subject": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Happy"
+    },
+    {
+      "id": 2,
+      "date": "07/22/2025",
+      "subject": "Second Story",
+      "entry": "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok"
+    },
+    {
+      "id": 3,
+      "date": "07/23/2025",
+      "subject": "Third Story",
+      "entry": "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
+      "mood": "Indifferent"
+    },
+    {
+      "id": 4,
+      "date": "07/24/2025",
+      "subject": "Fourth story",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok"
+    },
+    {
+      "id": 5,
+      "date": "07/25/2025",
+      "subject": "Fifth Story",
+      "entry": "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Happy"
+    },
+    {
+      "id": 6,
+      "date": "07/28/2025",
+      "subject": "Sixth Story",
+      "entry": "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
+      "mood": "Sad"
+    },
+    {
+      "theDate": "2020-03-11",
+      "subject": "ssssssss",
+      "entry": "ssssssssssss",
+      "mood": "indifferent",
+      "id": 7
+    },
+    {
+      "theDate": "2020-03-01",
+      "subject": "Subjecterrrrrrrr",
+      "entry": "Entryyyyyyyyyyyyy",
+      "mood": "joy",
+      "id": 8
+    },
+    {
+      "theDate": "",
+      "subject": "",
+      "entry": "",
+      "mood": "select",
+      "id": 9
+    },
+    {
+      "theDate": "",
+      "subject": "",
+      "entry": "",
+      "mood": "select",
+      "id": 10
+    },
+    {
+      "theDate": "2020-03-27",
+      "subject": "Hello my Form!",
+      "entry": "In placerat eget nisi sit amet efficitur. Etiam imperdiet est enim, in sollicitudin ipsum sodales ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse ultricies egestas mauris, eget sagittis ipsum aliquam at. Quisque cursus lorem eros, ut aliquam tellus porta sit amet. Nullam molestie tortor quis dui luctus, sit amet faucibus nunc finibus. Integer ultricies tincidunt turpis eu dapibus. Maecenas purus felis, rhoncus sed aliquet eget, lacinia in urna. Fusce id ornare lorem. Mauris fringilla malesuada volutpat. Suspendisse eu porta enim.",
+      "mood": "joy",
+      "id": 11
+    },
+    {
+      "theDate": "",
+      "subject": "",
+      "entry": "",
+      "mood": "select",
+      "id": 12
+    },
+    {
+      "theDate": "",
+      "subject": "",
+      "entry": "",
+      "mood": "select",
+      "id": 13
+    }
+  ]
+}

@@ -1,76 +1,45 @@
-console.log("JournalDataProvider.js loaded")
+let journal = []
 
-const journal = [
-  {
-    date: "07/20/2025",
-    concept: "HTML & CSS",
-    entry:
-      "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Happy",
-  },
-  {
-    date: "07/22/2025",
-    concept: "Second Story",
-    entry:
-      "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok",
-  },
-  {
-    date: "07/23/2025",
-    concept: "Third Story",
-    entry:
-      "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Indifferent",
-  },
-  {
-    date: "07/24/2025",
-    concept: "Fourth story",
-    entry:
-      "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok",
-  },
-  {
-    date: "07/25/2025",
-    concept: "Fifth Story",
-    entry:
-      "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Happy",
-  },
-  {
-    date: "07/28/2025",
-    concept: "Sixth Story",
-    entry:
-      "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Sad",
-  },
-]
+const eventHub = document.querySelector(".entryLog")
 
-/*
-  You export a function that provides a version of the
-  raw data in the format that you want
-*/
-export const useJournalEntries = () => {
-  const sortedByDate = journal.sort(
-    (currentEntry, nextEntry) =>
-      Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-  )
-  return sortedByDate
+const dispatchStateChangeEvent = () => {
+  const journalStateChangedEvent = new CustomEvent("journalStateChanged")
+
+  eventHub.dispatchEvent(journalStateChangedEvent)
 }
 
-document
-  .querySelector("#submitBtn")
-  .addEventListener("click", theClickEvent => {
-    submitEntry()
+export const useJournal = () => journal.sort((c, n) => n.date - c.date).slice()
+
+export const getJournal = () => {
+  return fetch("http://localhost:8088/journal")
+    .then(response => response.json())
+    .then(parsedJournal => {
+      journal = parsedJournal
+    })
+}
+
+export const saveJournal = JournalEntry => {
+  return fetch("http://localhost:8088/journal", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(JournalEntry),
   })
-
-const submitEntry = () => {
-  const journalDate = document.getElementById("journalDate").value
-  const conceptsCovered = document.getElementById("conceptsCovered").value
-  const journalEntry = document.getElementById("journalEntry").value
-  const moodForTheDay = document.getElementById("moodForTheDay").value
-  return `${journalDate.value} ${conceptsCovered.value} ${journalEntry.value} ${moodForTheDay.value}`
+    .then(getJournal)
+    .then(dispatchStateChangeEvent)
 }
 
-submitEntry()
+// document.querySelector("#submitBtn").addEventListener("click", theClickEvent => {
+//   submitEntry()
+// })
 
-export default submitEntry
+// export const submitEntry = () => {
+//   const journalDate = document.getElementById("journalDate").value
+//   const conceptsCovered = document.getElementById("conceptsCovered").value
+//   const journalEntry = document.getElementById("journalEntry").value
+//   const moodForTheDay = document.getElementById("moodForTheDay").value
+//   return `${journalDate.value} ${conceptsCovered.value} ${journalEntry.value} ${moodForTheDay.value}`
+// }
+
+// submitEntry()

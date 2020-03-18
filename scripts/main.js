@@ -1,14 +1,5 @@
-console.log("main.js loaded")
+import { JournalEntryList } from "./JournalEntryList.js"
+import { JournalForm } from "./JournalFormList.js"
 
-import submitMsg from "./JournalDataProvider.js"
-import EntryListComponent from './journalEntryList.js'
-
-// import journalEntry from "./journalEntry.js"
-// import journalEntryList from "./journalEntryList.js"
-
-
-submitMsg()
-EntryListComponent()
-// journalEntry()
-// // journalEntryList()
-
+JournalForm()
+JournalEntryList()
