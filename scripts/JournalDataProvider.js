@@ -6,48 +6,48 @@ const journal = [
     concept: "HTML & CSS",
     entry:
       "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Happy"
+    mood: "Happy",
   },
   {
     date: "07/22/2025",
     concept: "Second Story",
     entry:
       "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok"
+    mood: "Ok",
   },
   {
     date: "07/23/2025",
     concept: "Third Story",
     entry:
       "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Indifferent"
+    mood: "Indifferent",
   },
   {
     date: "07/24/2025",
     concept: "Fourth story",
     entry:
       "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Ok"
+    mood: "Ok",
   },
   {
     date: "07/25/2025",
     concept: "Fifth Story",
     entry:
       "This is my second story! We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    mood: "Happy"
+    mood: "Happy",
   },
   {
     date: "07/28/2025",
     concept: "Sixth Story",
     entry:
       "Grid layouts with Flexbox in CSS. This is my second story! We talked about HTML components and how to make .",
-    mood: "Sad"
-  }
+    mood: "Sad",
+  },
 ]
 
 /*
-    You export a function that provides a version of the
-    raw data in the format that you want
+  You export a function that provides a version of the
+  raw data in the format that you want
 */
 export const useJournalEntries = () => {
   const sortedByDate = journal.sort(
@@ -59,11 +59,9 @@ export const useJournalEntries = () => {
 
 document
   .querySelector("#submitBtn")
-  .addEventListener("click", 
-  theClickEvent => {
+  .addEventListener("click", theClickEvent => {
     submitEntry()
-  }
-)
+  })
 
 const submitEntry = () => {
   const journalDate = document.getElementById("journalDate").value
