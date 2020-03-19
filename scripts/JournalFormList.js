@@ -33,6 +33,7 @@ contentTarget.addEventListener("click", clickEvent => {
 const render = () => {
   contentTarget.innerHTML = `
   <form class="dh-Form">
+    <h3>Entry</h3>
     <fieldset>
       <label for="theDate">Date</label>
       <input type="date" id="theDate">

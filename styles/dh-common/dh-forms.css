@@ -1,7 +1,7 @@
 /* NOTES FORM + */
 .dh-Form {
   background: white;
-  padding: 1em 1.25em;
+  padding: 2em;
   /* border: 1px solid var(--grey-100); */
   /* margin-bottom: 1.5em; */
   border-radius: 3px;
@@ -12,12 +12,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  /* justify-content: center;
   justify-items: center;
   align-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
+.dh-Form h3,
 .dh-Form h4 {
   margin-top: 0.3em;
   margin-bottom: 1em;

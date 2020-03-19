@@ -1,5 +1,6 @@
 export const JournalFormHtml = entryObj => {
   return `
+  <h4>Entry</h4>
   <form>
     <fieldset>
       <label for="date">Date</label>

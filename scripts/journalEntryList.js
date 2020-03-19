@@ -20,21 +20,3 @@ const render = () => {
 export const JournalEntryList = () => {
   render()
 }
-
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-// const EntryListComponent = () => {
-//   // Use the journal entry data from the data provider component
-//   const entries = useJournalEntries()
-
-//   for (const entry of entries) {
-//     /*
-//       Invoke the component that returns an
-//       HTML representation of a single entry
-//     */
-//     entryLog.innerHTML += JournalEntryComponent(entry)
-//     // console.log(`This is a joutnal thing: ${journal}`)
-//   }
-// }
-
-// export default EntryListComponent
